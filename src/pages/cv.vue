@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="../assets/css/feather-icons.css">
 <template>
   <div>
     <div class="button-row">
@@ -278,10 +279,10 @@
 
 <script>
 // @ is an alias to /src
-
 import CourseModule from "../components/cv/course-module";
 import CmnSectionTitle from "../components/common/cmn-section-title";
 import CmnButton from "../components/common/cmn-button";
+
 export default {
   name: 'home',
   components: {CmnButton, CmnSectionTitle, CourseModule},
@@ -290,7 +291,7 @@ export default {
       window.print();
     },
     download() {
-
+      window.open("files/cv.pdf", "CV");
     }
   }
 }

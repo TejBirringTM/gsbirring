@@ -3,9 +3,9 @@
 </template>
 
 <script>
-  import useKeyboardNavigation from "./use/keyboardNavigation";
-  import useDisableContextMenus from "./use/disableContextMenus";
-  import usePlaformSpecificAdjustments from "./use/plaformSpecificAdjustments";
+  import useKeyboardNavigation from "./use/global/keyboardNavigation";
+  import useDisableContextMenus from "./use/global/disableContextMenus";
+  import usePlaformSpecificAdjustments from "./use/global/plaformSpecificAdjustments";
 
 
 
