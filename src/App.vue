@@ -3,6 +3,8 @@
 </template>
 
 <script>
+
+
   function isInViewport(elem) {
     let bounding = elem.getBoundingClientRect();
     return (
@@ -14,133 +16,84 @@
   }
 
 
-  function _focus(el, scrollFunct) {
-      el.focus({preventScroll:true});
-
-      if (scrollFunct)
-        scrollFunct(el);
-  }
-
-
-  function focus(idx, scrollFunct) {
-    const all = document.querySelectorAll("a, button, [tabindex='0']");
-
-    const focusOnZeroEl = () => {
-      if (all[0]) {
-        const prev = all[all.length-1] ? all.length-1 : 0;
-        _focus(all[0], scrollFunct);
-        return {prevFocusIdx: prev, currentFocusIdx: 0, nextFocusIdx: 1};
-      }
-    };
-
-    if (!idx)
-      focusOnZeroEl();
-
-    if (all[idx]) {
-      const prev = all[idx-1] ? idx-1 : all[all.length-1] ? all.length-1 : 0;
-      const next = all[idx+1] ? idx+1 : 0;
-      _focus(all[idx], scrollFunct);
-      return {prevFocusIdx: prev, currentFocusIdx: idx, nextFocusIdx: next};
-    }
-  }
-
-
-  function ensureFocusOnElementInViewport(prevIdx, currIdx, nextIdx) {
-    const all = document.querySelectorAll("a, button, [tabindex='0']");
-
-    const currEl = all[currIdx];
-
-    let retVal = {prevFocusIdx: prevIdx, currentFocusIdx: currIdx, nextFocusIdx: nextIdx};
-
-    if (currEl && !isInViewport(currEl)) {
-      let idx = 0;
-      for (const el of all) {
-        if (isInViewport(el)) {
-          const prev = all[idx-1] ? idx-1 : 0;
-          const next = all[idx+1] ? idx+1 : 0;
-          retVal = {prevFocusIdx: prev, currentFocusIdx: idx, nextFocusIdx: next}; // TODO: check if indexes actually exist as elements in list.
-          break; // exit loop
-        }
-        idx++;
-      }
-    }
-
-    return retVal;
-  }
-
-
   export default {
     data() { return {
-      nextFocusIdx: null,
-      currentFocusIdx: null,
-      prevFocusIdx: null
+      activeElement: null,
     }},
     created() {
       console.log("App created");
 
       const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
 
-      // Ensure that when item is clicked, it is focus on
-      // TODO: perhaps re-factor
-      document.addEventListener('focus', (ev) => {
-        const arr = Array.from(document.querySelectorAll("a, button, [tabindex='0']"));
-        const idx = arr.indexOf(ev.target);
-        this.currentFocusIdx = idx;
-        this.prevFocusIdx = arr[idx-1] ? idx-1 : 0;
-        this.nextFocusIdx = arr[idx+1] ? idx+1 : 0;
-      }, true);
-
+    document.addEventListener("focus", (ev) => {
+      this.activeElement = ev.target;
+      this.scrollToElement(this.activeElement);
+    }, true);
 
       document.body.addEventListener('keydown', (ev) => {
+        const focusableElements = Array.from(document.querySelectorAll("a, button, [tabindex='0']"));
+
+        const focusOnFirstFocusableElementInView = () => {
+          for (const el of focusableElements) {
+            if (isInViewport(el)) {
+              this.setFocus(el);
+              break;
+            }
+          }
+        };
+
         switch (ev.key) {
           case "ArrowRight":
-            if (!this.nextFocusIdx)
-              this.focus(0);
-            else
-              this.focus(this.nextFocusIdx);
+            if (!this.activeElement) {
+              focusOnFirstFocusableElementInView();
+            }
+            else if (this.activeElement) {
+              // get next element, if it exists
+              const idxThis = focusableElements.indexOf(this.activeElement);
+              const elNext = focusableElements[idxThis+1] ?  focusableElements[idxThis+1] : focusableElements[0];
+              this.setFocus(elNext);
+            }
+
             break;
           case "ArrowLeft":
-            if (!this.prevFocusIdx)
-              this.focus(0);
-            else
-              this.focus(this.prevFocusIdx);
+            if (!this.activeElement) {
+              focusOnFirstFocusableElementInView();
+            }
+            else if (this.activeElement) {
+              // get prev element, if it exists
+              const idxThis = focusableElements.indexOf(this.activeElement);
+              const elPrev = focusableElements[idxThis-1] ?  focusableElements[idxThis-1] : focusableElements[focusableElements.length-1];
+              this.setFocus(elPrev);
+            }
             break;
           case "ArrowDown":
             this.$smoothScroll({
               scrollTo: window.scrollY + (vh*.5),
               updateHistory: false,
             });
-            this.setFocusIndexes( ensureFocusOnElementInViewport(this.prevFocusIdx, this.currentFocusIdx, this.nextFocusIdx) );
+            this.activeElement = undefined;
             break;
           case "ArrowUp":
             this.$smoothScroll({
               scrollTo: window.scrollY - (vh*.5),
               updateHistory: false,
             });
-            this.setFocusIndexes( ensureFocusOnElementInViewport(this.prevFocusIdx, this.currentFocusIdx, this.nextFocusIdx) );
+            this.activeElement = undefined;
             break;
           default:
         }
       });
     },
     methods: {
-      focus(idx) {
-        const smoothScroll = (el) => {
-          this.$smoothScroll({
-            scrollTo: el,
-            updateHistory: false,
-            offset: -150
-          })
-        };
-
-        this.setFocusIndexes( focus(idx, smoothScroll) );
+      setFocus(el) {
+        el.focus({preventScroll:true});
       },
-
-      setFocusIndexes(obj) {
-        console.log(obj);
-        this.prevFocusIdx = obj.prevFocusIdx;
-        this.currentFocusIdx = obj.currentFocusIdx;
-        this.nextFocusIdx = obj.nextFocusIdx;
+      scrollToElement(el) {
+        this.$smoothScroll({
+          scrollTo: el,
+          updateHistory: false,
+          offset: -150
+        });
       }
     }
   }
