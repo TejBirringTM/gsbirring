@@ -4,6 +4,8 @@
 
 <script>
   import useKeyboardNavigation from "./use/keyboardNavigation";
+  import useDisableContextMenus from "./use/disableContextMenus";
+  import usePlaformSpecificAdjustments from "./use/plaformSpecificAdjustments";
 
 
 
@@ -11,6 +13,8 @@
 
     setup() {
       useKeyboardNavigation();
+      useDisableContextMenus();
+      usePlaformSpecificAdjustments();
     },
 
     created() {

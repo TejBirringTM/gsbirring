@@ -1,52 +1,32 @@
 <template>
   <div class="home">
 
-    <blockquote>
-      This is a block quote.
-    </blockquote>
-    <cite>Somebody Very Special</cite>
 
-    <p class="feature">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at malesuada libero. Fusce ornare sem velit, vel luctus augue volutpat sit amet. Proin in ante et dolor porttitor finibus. Curabitur quis nisl lorem. Maecenas tristique luctus tortor, at eleifend ex varius et. Sed venenatis suscipit hendrerit. Duis bibendum felis vel congue efficitur. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus eget ex id ante fermentum euismod vel ac lectus. Ut lacinia sapien mattis lectus lacinia finibus. Nam sodales maximus sem, et feugiat dolor feugiat non. Nam congue tellus vestibulum, cursus turpis eu, molestie sapien.
-    </p>
+    <section class="text-center w-70 mx-auto">
+      <img class="profile-main" src="../assets/images/profile.png"  alt="" />
+      <h1 tabindex="0" nogrow>Computer Systems Engineer, <br>Founder, Historian, Author,<br>
+        Technology & Facial Hair Enthusiast...</h1>
+    </section>
 
-    <h1>Heading 1</h1>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at malesuada libero. Fusce ornare sem velit, vel luctus augue volutpat sit amet. Proin in ante et dolor porttitor finibus. Curabitur quis nisl lorem. Maecenas tristique luctus tortor, at eleifend ex varius et. Sed venenatis suscipit hendrerit. Duis bibendum felis vel congue efficitur. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus eget ex id ante fermentum euismod vel ac lectus. Ut lacinia sapien mattis lectus lacinia finibus. Nam sodales maximus sem, et feugiat dolor feugiat non. Nam congue tellus vestibulum, cursus turpis eu, molestie sapien.
-    </p>
-    <h2>Heading 2</h2>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at malesuada libero. Fusce ornare sem velit, vel luctus augue volutpat sit amet. Proin in ante et dolor porttitor finibus. Curabitur quis nisl lorem. Maecenas tristique luctus tortor, at eleifend ex varius et. Sed venenatis suscipit hendrerit. Duis bibendum felis vel congue efficitur. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus eget ex id ante fermentum euismod vel ac lectus. Ut lacinia sapien mattis lectus lacinia finibus. Nam sodales maximus sem, et feugiat dolor feugiat non. Nam congue tellus vestibulum, cursus turpis eu, molestie sapien.
-    </p>
-    <h3>Heading 3</h3>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at malesuada libero. Fusce ornare sem velit, vel luctus augue volutpat sit amet. Proin in ante et dolor porttitor finibus. Curabitur quis nisl lorem. Maecenas tristique luctus tortor, at eleifend ex varius et. Sed venenatis suscipit hendrerit. Duis bibendum felis vel congue efficitur. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus eget ex id ante fermentum euismod vel ac lectus. Ut lacinia sapien mattis lectus lacinia finibus. Nam sodales maximus sem, et feugiat dolor feugiat non. Nam congue tellus vestibulum, cursus turpis eu, molestie sapien.
-    </p>
-    <h4>Heading 4</h4>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at malesuada libero. Fusce ornare sem velit, vel luctus augue volutpat sit amet. Proin in ante et dolor porttitor finibus. Curabitur quis nisl lorem. Maecenas tristique luctus tortor, at eleifend ex varius et. Sed venenatis suscipit hendrerit. Duis bibendum felis vel congue efficitur. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus eget ex id ante fermentum euismod vel ac lectus. Ut lacinia sapien mattis lectus lacinia finibus. Nam sodales maximus sem, et feugiat dolor feugiat non. Nam congue tellus vestibulum, cursus turpis eu, molestie sapien.
-    </p>
-    <h5>Heading 5</h5>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at malesuada libero. Fusce ornare sem velit, vel luctus augue volutpat sit amet. Proin in ante et dolor porttitor finibus. Curabitur quis nisl lorem. Maecenas tristique luctus tortor, at eleifend ex varius et. Sed venenatis suscipit hendrerit. Duis bibendum felis vel congue efficitur. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus eget ex id ante fermentum euismod vel ac lectus. Ut lacinia sapien mattis lectus lacinia finibus. Nam sodales maximus sem, et feugiat dolor feugiat non. Nam congue tellus vestibulum, cursus turpis eu, molestie sapien.
-    </p>
-    <h6>Heading 6</h6>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at malesuada libero. Fusce ornare sem velit, vel luctus augue volutpat sit amet. Proin in ante et dolor porttitor finibus. Curabitur quis nisl lorem. Maecenas tristique luctus tortor, at eleifend ex varius et. Sed venenatis suscipit hendrerit. Duis bibendum felis vel congue efficitur. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus eget ex id ante fermentum euismod vel ac lectus. Ut lacinia sapien mattis lectus lacinia finibus. Nam sodales maximus sem, et feugiat dolor feugiat non. Nam congue tellus vestibulum, cursus turpis eu, molestie sapien.
-    </p>
-<!--    <img src="../assets/logo.png">-->
-<!--    <HelloWorld msg="Welcome to Your Vue.js App"/>-->
-
-    <div>
-      <button @click="(ev) => { ev.target.blur() }">asds</button>
+    <div class="feature text-center" hide-on-mobile-devices>
+      <div class="d-flex-col-nowrap">
+        <cmn-arrow-keys />
+        <p class="mt-1 w-70" tabindex="0" nogrow>
+          On most modern browsers, you can navigate this website
+          using the arrow keys on your keyboard.
+        </p>
+      </div>
     </div>
+
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
+import CmnArrowKeys from "../components/common/cmn-arrow-keys";
 
 export default {
   name: 'home',
+  components: {CmnArrowKeys},
 }
 </script>

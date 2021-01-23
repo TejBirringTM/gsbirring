@@ -51,7 +51,7 @@ export default function useKeyboardNavigation() {
         * On key down:
         *
         * */
-        document.body.addEventListener('keydown', (ev) => {
+        document.body.addEventListener("keydown", (ev) => {
             const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
             const focusableElements = Array.from(document.querySelectorAll("a, button, [tabindex='0']"));
 
@@ -113,7 +113,7 @@ export default function useKeyboardNavigation() {
             }
         }); // switch
 
-        console.log("keyboardNavigation initialized.");
+        console.log("Keyboard Navigation initialized.");
     });
 }
 

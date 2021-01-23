@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="button-row">
-      <cmn-button text="Download" icon="feather-download-cloud" :on-click="print" />
+      <cmn-button text="Download" icon="feather-download-cloud" :on-click="download" />
         <cmn-button text="Print" icon="feather-printer" :on-click="print" />
     </div>
 
@@ -261,7 +261,7 @@
       <ul class="list">
         <li>
           I believe in continually developing new skill-sets and acquiring new knowledge.<br>
-          You can see a list of my completed courses on <a class="no-wrap" href="https://www.linkedin.com/in/tej-b-2b027246" target="_blank">LinkedIn (<i class="feather-linkedin"></i>).</a>
+          You can see a list of my completed courses on <a class="no-wrap" href="https://www.linkedin.com/in/tej-b-2b027246" target="_blank">LinkedIn (<i class="feather-linkedin"></i>)</a>.
         </li>
 <!--        <li>-->
 <!--          I am <strong>not</strong> interested in a job as a "code monkey".-->
@@ -288,6 +288,9 @@ export default {
   methods: {
     print() {
       window.print();
+    },
+    download() {
+
     }
   }
 }
