@@ -11,13 +11,18 @@ function isInViewport(elem) {
     );
 }
 
-function setFocus(elem) {
-    elem.focus({preventScroll:true});
-}
+
+
+
 
 export default function useKeyboardNavigation() {
     const smoothScroll = inject('smoothScroll');
     let activeElement = null;
+
+    function setFocus(elem) {
+        activeElement = elem;
+        elem.focus({preventScroll:true});
+    }
 
     function scrollToElement(el) {
         smoothScroll({
@@ -60,13 +65,14 @@ export default function useKeyboardNavigation() {
             };
 
 
-
             switch (ev.key) {
                 case "ArrowRight":
                     if (!activeElement) {
+                        // console.log("No active element. Focussing on first in view.");
                         focusOnFirstFocusableElementInView();
                     }
                     else if (activeElement) {
+                        // console.log("activeElement: ", activeElement);
                         // get next element, if it exists
                         const idxThis = focusableElements.indexOf(activeElement);
                         const elNext = focusableElements[idxThis+1] ?  focusableElements[idxThis+1] : focusableElements[0];
@@ -76,9 +82,11 @@ export default function useKeyboardNavigation() {
 
                 case "ArrowLeft":
                     if (!activeElement) {
+                        // console.log("No active element. Focussing on first in view.");
                         focusOnFirstFocusableElementInView();
                     }
                     else if (activeElement) {
+                        // console.log("activeElement: ", activeElement);
                         // get prev element, if it exists
                         const idxThis = focusableElements.indexOf(activeElement);
                         const elPrev = focusableElements[idxThis-1] ?  focusableElements[idxThis-1] : focusableElements[focusableElements.length-1];
@@ -103,7 +111,7 @@ export default function useKeyboardNavigation() {
                     break;
                 default:
             }
-        });
+        }); // switch
 
         console.log("keyboardNavigation initialized.");
     });
