@@ -41,7 +41,7 @@
 
       <h4 class="text-center" tabindex="0" nogrow>Web Dev Frameworks & Libs</h4>
       <ul class="flat">
-        <li>Vue.js</li>
+        <li>Vue.js 2/3</li>
         <li>Svelte</li>
         <li>D3.js</li>
         <li>Express</li>
@@ -245,7 +245,7 @@
       <p><i class="feather-award"></i> <em>Awards:</em></p>
       <ul class="list">
         <li>
-          Business, IT and Social Science Faculty Award for A2 Computing,
+          <span>Business, IT and Social Science Faculty Award for A2 Computing,</span>
           <br>
           <em>presented by Rt. Hon. Keith Vaz M.P.</em>
         </li>
@@ -261,8 +261,7 @@
       <cmn-section-title title="Other Info" icon="feather-thumbs-up" />
       <ul class="list">
         <li>
-          I believe in continually developing new skill-sets and acquiring new knowledge.<br>
-          You can see a list of my completed courses on <a class="no-wrap" href="https://www.linkedin.com/in/tej-b-2b027246" target="_blank">LinkedIn (<i class="feather-linkedin"></i>)</a>.
+          I believe in continually developing new skill-sets and acquiring new knowledge. You can see a list of my completed courses on <a class="no-wrap" href="https://www.linkedin.com/in/tej-b-2b027246" target="_blank">LinkedIn (<i class="feather-linkedin"></i>)</a>.
         </li>
 <!--        <li>-->
 <!--          I am <strong>not</strong> interested in a job as a "code monkey".-->
@@ -282,16 +281,20 @@
 import CourseModule from "../components/cv/course-module";
 import CmnSectionTitle from "../components/common/cmn-section-title";
 import CmnButton from "../components/common/cmn-button";
+import useFirebaseStorage from "../use/firebase/storage";
 
 export default {
   name: 'home',
+  setup() {
+    return useFirebaseStorage();
+  },
   components: {CmnButton, CmnSectionTitle, CourseModule},
   methods: {
     print() {
       window.print();
     },
     download() {
-      window.open("files/cv.pdf", "CV");
+      this.downloadFile("public/CV - Tej Birring.pdf");
     }
   }
 }

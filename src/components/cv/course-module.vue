@@ -1,5 +1,5 @@
 <template>
-    <li><span class="text-theme-2">{{code}}</span> {{name}}</li>
+    <li><span class="text-theme-2 highlight-theme-4">{{code}}</span> {{name}}</li>
 </template>
 
 <script>

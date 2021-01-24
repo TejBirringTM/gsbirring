@@ -17,7 +17,7 @@
 <!--      <i class="feather-grid"></i>-->
 <!--      <div class="icon-caption">Projects</div>-->
 <!--    </router-link>-->
-      <router-link class="icon-button" to="/cv">
+      <router-link class="icon-button" to="/get-in-touch">
         <i class="feather-mail"></i>
         <div class="icon-caption">Contact</div>
       </router-link>

@@ -1,23 +1,4 @@
-$theme-color-1: #fdfffc;
-$theme-color-2: #00174F;//#235789;
-$theme-color-3: #CC0C2F;//#c1292e;
-//$theme-color-3-dark: scale_color($theme-color-3, $lightness: -10%);
-$theme-color-4: #fcc209;//#ffd700;//#eeb609;//
-//$theme-color-4-dark: scale_color($theme-color-4, $lightness: -10%);
-$theme-color-5: #161925;
-
-$theme-color-grey-1: #dbd9d2;
-$theme-color-grey-2: scale_color($theme-color-grey-1, $lightness: -35%);
-
-$site-in-background-color: transparentize(#000, 0.7);
-
-$breakpoint-mobile: 375px;
-$breakpoint-portrait-tablet: 600px; // and
-$breakpoint-landscape-tablet: 768px;
-$breakpoint-lg-screen: 992px;
-$breakpoint-xl-screen: 1200px;
-
-$footer-height: 2.6rem;
+@import "global/vars";
 
 // Montserrat and Raleway typefaces from Google Fonts
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;0,600;0,700;1,200;1,400;1,700&family=Raleway:ital@0;1&display=swap');
@@ -169,7 +150,7 @@ nav {
   .nav-buttons {
     display: flex;
     flex-flow: row wrap;
-    justify-content: center;
+    justify-content: space-around;
 
     $margin: 0.6rem;
     .icon-button {
@@ -207,7 +188,7 @@ footer {
 
 /* start: icon-button */
 .icon-button {
-  border-radius: 50%;
+  border-radius: 5%;
   height: 60px;
   width: 60px;
   background-color: transparent;
@@ -235,13 +216,13 @@ footer {
     letter-spacing: .3rem;
   }
 
-  &:focus {
-    i {
-      color: $theme-color-4;
-    }
-  }
+  //&:focus {
+  //  i {
+  //    color: $theme-color-4;
+  //  }
+  //}
 
-  &:hover {
+  &:hover, &:focus {
     background-color: $theme-color-4;
 
     transition-duration: 0.3s;
@@ -279,7 +260,9 @@ footer {
 .text-right {
   text-align: right;
 }
-
+.text-large {
+  font-size: 3rem;
+}
 
 blockquote {
   margin-top: 3rem;
@@ -371,49 +354,6 @@ blockquote::after
   button:last-child {
     margin-right: 0;
   }
-}
-
-button {
-  border: 0.2rem $theme-color-3 solid;
-  font-size: 1.4rem;
-  font-weight: 600;
-  min-height: 4rem;
-  padding: 1rem;
-  box-sizing: border-box;
-  //border-radius: 100px 100px;
-  cursor: pointer;
-  background-color: $theme-color-1;
-  text-transform: uppercase;
-  line-height: 1;
-  color: $theme-color-3;
-  font-family: Raleway, sans-serif;
-  margin: 1rem 0;
-
-  i {
-    margin-left: .25rem;
-  }
-}
-
-button:hover {
-  transition-duration: 0.3s;
-  transition-property: transform;
-  transform: scale(1.2);
-  //color: $theme-color-3;
-  background-color: $theme-color-4;
-  border-color: $theme-color-3;
-  color: $theme-color-3;
-}
-
-button:active {
-  //border-color: $theme-color-4;
-  //color: $theme-color-4;
-  border-color: $theme-color-4;
-  //color: $theme-color-4;
-}
-
-button:focus {
-  border-color: $theme-color-4;
-  //color: $theme-color-4;
 }
 
 .section-title {
@@ -593,16 +533,23 @@ ul.flat {
   white-space: nowrap;
 }
 
+*[nogrow] {
+  cursor: pointer;
+}
+
 *[nogrow]:focus {
   outline: none;
     text-decoration-line: underline;
     text-decoration-style: wavy;
 }
 
+* {
+  outline: none;
+
+}
 
 /* Pulse Grow - courtesy: Hover.css v2  */
-*:not([nogrow]):focus {
-  outline: none;
+*:not([nogrow], input, textarea):focus {
   -webkit-animation-name: hvr-pulse-grow;
   animation-name: hvr-pulse-grow;
   -webkit-animation-duration: 0.3s;
@@ -699,6 +646,9 @@ div.key.icon > span
 
 
 /* start: margin */
+.mt-0 {
+  margin-top: 0;
+}
 .mt-1 {
   margin-top: 1rem;
 }
@@ -726,6 +676,9 @@ div.key.icon > span
 .mb-4 {
   margin-bottom: 4rem;
 }
+.ml-0 {
+  margin-left: 0;
+}
 .ml-1 {
   margin-left: 1rem;
 }
@@ -738,13 +691,32 @@ div.key.icon > span
 .ml-4 {
   margin-left: 4rem;
 }
-
+.mr-0 {
+  margin-right: 0;
+}
+.mr-1 {
+  margin-right: 1rem;
+}
+.mr-2 {
+  margin-right: 2rem;
+}
+.mr-3 {
+  margin-right: 3rem;
+}
+.mr-4 {
+  margin-right: 4rem;
+}
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
 }
 /* end: margin */
 
+/* start: padding */
+.p-1 {
+  padding: 1rem;
+}
+/* end: padding */
 
 .highlight-theme-1 {
   background-color: transparentize($theme-color-1, 0.6);
@@ -757,6 +729,10 @@ div.key.icon > span
 }
 .highlight-theme-4 {
   background-color: transparentize($theme-color-4, 0.7);
+}
+
+.d-block {
+  display: block;
 }
 
 .d-inline-block {
@@ -819,6 +795,81 @@ img {
 }
 /* end: image, img */
 
+/* start: form controls */
+button {
+  border: 0.2rem $theme-color-3 solid;
+  @media (max-width: $breakpoint-portrait-tablet) {
+    border-width: 0.3rem;
+  }
+  font-size: 1.4rem;
+  font-weight: 600;
+  min-height: 4rem;
+  padding: 1rem;
+  box-sizing: border-box;
+  //border-radius: 100px 100px;
+  cursor: pointer;
+  background-color: $theme-color-1;
+  text-transform: uppercase;
+  line-height: 1;
+  color: $theme-color-3;
+  font-family: Raleway, sans-serif;
+  margin: 1rem 0;
+
+  box-shadow: 0.2rem 0.2rem 0.4rem transparentize($theme-color-grey-1, 0.5);
+
+  i {
+    margin-left: .25rem;
+  }
+
+  &:hover {
+    transition-duration: 0.3s;
+    transition-property: transform;
+    transform: scale(1.2);
+    //color: $theme-color-3;
+    background-color: $theme-color-4;
+    border-color: $theme-color-3;
+    color: $theme-color-3;
+  }
+
+  &:active {
+    border-color: $theme-color-4;
+  }
+
+  &:focus {
+    border-color: $theme-color-4;
+  }
+}
+
+input[type='text'], textarea {
+  font-family: Raleway, sans-serif;
+  border: 0.2rem $theme-color-3 solid;
+  @media (max-width: $breakpoint-portrait-tablet) {
+    border-width: 0.3rem;
+  }
+  font-size: 1.4rem;
+  font-weight: 600;
+  min-height: 4rem;
+  padding: 1rem;
+  box-sizing: border-box;
+
+  &::placeholder {
+    color: $theme-color-grey-2;
+  }
+
+  &:hover {
+    //background-color: $theme-color-4;
+  }
+
+  &:focus {
+    border-color: $theme-color-4;
+    &::placeholder {
+      color: $theme-color-grey-1;
+    }
+  }
+}
+/* end: form controls */
+
+
 /* start: modal */
 div.modal {
   display: block;
@@ -866,5 +917,20 @@ div.modal {
       background-color: transparent;
       color: $theme-color-3;
     }
+  }
+}
+
+input[type='text']:disabled, button:disabled {
+  border-color: $theme-color-grey-2;
+  color: $theme-color-grey-2;
+  box-shadow: none;
+  cursor: default;
+
+  &:hover {
+    transition-property: none;
+    transform: none;
+    background-color: $theme-color-1;
+    border-color: $theme-color-grey-2;
+    color: $theme-color-grey-2;
   }
 }

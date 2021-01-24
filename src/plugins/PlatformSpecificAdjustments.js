@@ -1,5 +1,4 @@
 const PlatformSpecificAdjustments = {};
-
 PlatformSpecificAdjustments.install = function (Vue) {
     Vue.mixin({
         updated() {

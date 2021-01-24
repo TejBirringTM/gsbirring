@@ -55,6 +55,8 @@ export default function useKeyboardNavigation() {
             const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
             const focusableElements = Array.from(document.querySelectorAll("a, button, [tabindex='0']"));
 
+            const focusIsOnFormInput = (activeElement && activeElement.nodeName === "INPUT" || activeElement && activeElement.nodeName === "TEXTAREA");
+
             const focusOnFirstFocusableElementInView = () => {
                 for (const el of focusableElements) {
                     if (isInViewport(el)) {
@@ -64,50 +66,79 @@ export default function useKeyboardNavigation() {
                 }
             };
 
+            const nextViableElement = () => {
+                if (!activeElement) {
+                    console.log("No active element. Focussing on first in view.");
+                    focusOnFirstFocusableElementInView();
+                }
+                else if (activeElement) {
+                    ev.preventDefault();
+                    console.log("activeElement: ", activeElement);
+                    // get next element, if it exists
+                    const idxThis = focusableElements.indexOf(activeElement);
+                    const elNext = focusableElements[idxThis+1] ?  focusableElements[idxThis+1] : focusableElements[0];
+                    setFocus(elNext);
+                }
+            };
+
+            const prevViableElement = () => {
+                if (!activeElement) {
+                    // console.log("No active element. Focussing on first in view.");
+                    focusOnFirstFocusableElementInView();
+                }
+                else if (activeElement) {
+                    ev.preventDefault();
+                    // console.log("activeElement: ", activeElement);
+                    // get prev element, if it exists
+                    const idxThis = focusableElements.indexOf(activeElement);
+                    const elPrev = focusableElements[idxThis-1] ?  focusableElements[idxThis-1] : focusableElements[focusableElements.length-1];
+                    setFocus(elPrev);
+                }
+            };
+
+            const smoothScrollDown = () => {
+                smoothScroll({
+                    scrollTo: window.scrollY + (vh*.5),
+                    updateHistory: false,
+                });
+                activeElement = undefined;
+            };
+
+            const smoothScrollUp = () => {
+                smoothScroll({
+                    scrollTo: window.scrollY - (vh*.5),
+                    updateHistory: false,
+                });
+                activeElement = undefined;
+            };
+
+            const nextFormInput = () => {
+                nextViableElement();
+            };
+
+            const prevFormInput = () => {
+                prevViableElement();
+            };
 
             switch (ev.key) {
                 case "ArrowRight":
-                    if (!activeElement) {
-                        // console.log("No active element. Focussing on first in view.");
-                        focusOnFirstFocusableElementInView();
-                    }
-                    else if (activeElement) {
-                        // console.log("activeElement: ", activeElement);
-                        // get next element, if it exists
-                        const idxThis = focusableElements.indexOf(activeElement);
-                        const elNext = focusableElements[idxThis+1] ?  focusableElements[idxThis+1] : focusableElements[0];
-                        setFocus(elNext);
-                    }
+                    if (focusIsOnFormInput) return;
+                    nextViableElement();
                     break;
 
                 case "ArrowLeft":
-                    if (!activeElement) {
-                        // console.log("No active element. Focussing on first in view.");
-                        focusOnFirstFocusableElementInView();
-                    }
-                    else if (activeElement) {
-                        // console.log("activeElement: ", activeElement);
-                        // get prev element, if it exists
-                        const idxThis = focusableElements.indexOf(activeElement);
-                        const elPrev = focusableElements[idxThis-1] ?  focusableElements[idxThis-1] : focusableElements[focusableElements.length-1];
-                        setFocus(elPrev);
-                    }
+                    if (focusIsOnFormInput) return;
+                    prevViableElement();
                     break;
 
                 case "ArrowDown":
-                    smoothScroll({
-                        scrollTo: window.scrollY + (vh*.5),
-                        updateHistory: false,
-                    });
-                    activeElement = undefined;
+                    if (focusIsOnFormInput) { nextFormInput(); return; }
+                    smoothScrollDown();
                     break;
 
                 case "ArrowUp":
-                    smoothScroll({
-                        scrollTo: window.scrollY - (vh*.5),
-                        updateHistory: false,
-                    });
-                    activeElement = undefined;
+                    if (focusIsOnFormInput) { prevFormInput(); return; }
+                    smoothScrollUp();
                     break;
                 default:
             }
