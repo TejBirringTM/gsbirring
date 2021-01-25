@@ -1,0 +1,73 @@
+
+
+@media print {
+  @page {
+    size: auto;
+    margin: 20mm 20mm 25mm 20mm !important;
+  }
+
+  html {
+    font-size: 0.8rem; //10pt;
+
+    body {
+      margin: 0 !important;
+      padding: 0 !important;;
+
+      main .main-content {
+          margin: 0 !important;
+          padding: 0 !important;
+
+        }
+      }
+    }
+
+
+  blockquote, blockquote+cite, nav .nav-buttons , button, footer {
+    visibility: hidden !important;
+    display: none !important;
+  }
+
+  nav .title {
+    padding-top: 0 !important;
+    padding-bottom: 4rem !important;
+  }
+
+  .section-title {
+    padding: 0 !important;
+    margin: 0 !important;
+    span, i {
+      font-weight: 700 !important;
+    }
+  }
+
+
+  h1 {
+    font-size: 2.2rem !important;
+  }
+  h2 {
+    font-size: 2.0rem !important;
+  }
+  h3 {
+    font-size: 1.8rem !important;
+  }
+  h4 {
+    font-size: 1.6rem !important;
+  }
+  h5 {
+    font-size: 1.4rem !important;
+  }
+  h6 {
+    font-size: 1.2rem !important;
+  }
+
+  ul.flat {
+    li {
+      padding-top: .15rem !important;
+      padding-bottom: .15rem !important;
+    }
+  }
+
+  a:after {
+    content: " [" attr(href) "]";
+  }
+}

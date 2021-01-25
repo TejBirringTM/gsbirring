@@ -1,43 +1,52 @@
 <template>
-  <nav>
-    <p class="title text-center">
-      Gurtēj Singh Birring
-    </p>
+    <nav-menu title="Gurtēj Singh Birring" :nav-options="navOptions"/>
 
-    <div class="nav-buttons">
-    <router-link class="icon-button" to="/">
-      <i class="feather-home"></i>
-      <div class="icon-caption">Home</div>
-    </router-link>
-    <router-link class="icon-button" to="/cv">
-      <i class="feather-briefcase"></i>
-      <div class="icon-caption">CV</div>
-    </router-link>
-<!--    <router-link class="icon-button" to="/cv">-->
-<!--      <i class="feather-grid"></i>-->
-<!--      <div class="icon-caption">Projects</div>-->
-<!--    </router-link>-->
-      <router-link class="icon-button" to="/get-in-touch">
-        <i class="feather-mail"></i>
-        <div class="icon-caption">Contact</div>
-      </router-link>
+
+
+
+    <div class="page">
+
+      <main>
+          <router-view/>
+      </main>
+
+      <footer>
+          <div class="holder">
+              <p>
+                Copyright © {{ year }} by Gurtēj Singh Birring. All Rights Reserved.
+              </p>
+          </div>
+      </footer>
     </div>
-  </nav>
 
-  <div class="page">
-    <main>
-      <router-view/>
-    </main>
 
-    <footer>
-      <p>Copyright © {{ year }} by Gurtēj Singh Birring. All Rights Reserved.</p>
-    </footer>
-  </div>
+
+
+
 </template>
 
 <script>
+  import NavMenu from "../components/navigation/nav-menu";
   export default {
+    components: {NavMenu},
     data() { return {
+        navOptions: [
+          {
+            text: "Home",
+            icon: "feather-home",
+            path: "/"
+          },
+          {
+            text: "CV",
+            icon: "feather-briefcase",
+            path: "/cv"
+          },
+          {
+            text: "Contact",
+            icon: "feather-mail",
+            path: "/get-in-touch"
+          }
+        ],
         year: (new Date()).getFullYear()
       }
     }

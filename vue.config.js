@@ -8,7 +8,8 @@ module.exports = {
     loaderOptions: {
       scss: {
         additionalData: `
-          @import "~@/assets/css/global/_vars.scss";
+          @import "~@/assets/css/_vars.scss";
+          @import "~@/assets/css/global-utilities.scss";
         `
       }
     }

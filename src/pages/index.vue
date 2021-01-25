@@ -1,32 +1,33 @@
 <template>
-  <div class="home">
 
+  <cmn-jumbo>
+    <div class="d-flex-col-nowrap text-center">
+      <cmn-arrow-keys />
+      <p class="mt-1 w-70" tabindex="0" nogrow>
+        Use your arrow keys to navigate this website.<br>
+      </p>
+      (Feature is supported by most modern browsers.)
+    </div>
+  </cmn-jumbo>
 
-    <section class="text-center w-70 mx-auto">
+  <cmn-main-content>
+    <div class="text-center">
       <img class="profile-main" src="../assets/images/profile.png"  alt="" />
       <h1 tabindex="0" nogrow>Computer Systems Engineer, <br>Founder, Historian, Author,<br>
         Technology (& Facial Hair) Enthusiast...</h1>
-    </section>
-
-    <div class="feature text-center" hide-on-mobile-devices>
-      <div class="d-flex-col-nowrap">
-        <cmn-arrow-keys />
-        <p class="mt-1 w-70" tabindex="0" nogrow>
-          Use the arrow keys to navigate this website.<br>
-        </p>
-        (Supported by most modern browsers.)
-      </div>
     </div>
+  </cmn-main-content>
 
-  </div>
 </template>
 
 <script>
 // @ is an alias to /src
 import CmnArrowKeys from "../components/common/cmn-arrow-keys";
+import CmnJumbo from "../components/common/modals/cmn-jumbo";
+import CmnMainContent from "../components/common/cmn-main-content";
 
 export default {
   name: 'home',
-  components: {CmnArrowKeys},
+  components: {CmnMainContent, CmnJumbo, CmnArrowKeys},
 }
 </script>

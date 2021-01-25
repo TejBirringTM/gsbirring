@@ -10,6 +10,7 @@
            :pattern="pattern"
            spellcheck="false"
            v-model="value"
+           formnovalidate
     />
 </template>
 

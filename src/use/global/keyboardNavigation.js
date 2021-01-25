@@ -68,12 +68,11 @@ export default function useKeyboardNavigation() {
 
             const nextViableElement = () => {
                 if (!activeElement) {
-                    console.log("No active element. Focussing on first in view.");
+                    // console.log("No active element. Focussing on first in view.");
                     focusOnFirstFocusableElementInView();
                 }
                 else if (activeElement) {
-                    ev.preventDefault();
-                    console.log("activeElement: ", activeElement);
+                    // console.log("activeElement: ", activeElement);
                     // get next element, if it exists
                     const idxThis = focusableElements.indexOf(activeElement);
                     const elNext = focusableElements[idxThis+1] ?  focusableElements[idxThis+1] : focusableElements[0];
@@ -87,7 +86,6 @@ export default function useKeyboardNavigation() {
                     focusOnFirstFocusableElementInView();
                 }
                 else if (activeElement) {
-                    ev.preventDefault();
                     // console.log("activeElement: ", activeElement);
                     // get prev element, if it exists
                     const idxThis = focusableElements.indexOf(activeElement);
@@ -101,7 +99,8 @@ export default function useKeyboardNavigation() {
                     scrollTo: window.scrollY + (vh*.5),
                     updateHistory: false,
                 });
-                activeElement = undefined;
+                if (!focusIsOnFormInput)
+                    activeElement = undefined;
             };
 
             const smoothScrollUp = () => {
@@ -109,35 +108,38 @@ export default function useKeyboardNavigation() {
                     scrollTo: window.scrollY - (vh*.5),
                     updateHistory: false,
                 });
-                activeElement = undefined;
+                if (!focusIsOnFormInput)
+                    activeElement = undefined;
             };
 
-            const nextFormInput = () => {
-                nextViableElement();
-            };
-
-            const prevFormInput = () => {
-                prevViableElement();
-            };
+            // const nextFormInput = () => {
+            //     nextViableElement();
+            // };
+            //
+            // const prevFormInput = () => {
+            //     prevViableElement();
+            // };
 
             switch (ev.key) {
-                case "ArrowRight":
-                    if (focusIsOnFormInput) return;
+                case "ArrowRight": // was "ArrowRight", but changed to prevent confusion when user is entering textual data!
+                    // if (focusIsOnFormInput) return;
+                    ev.preventDefault();
                     nextViableElement();
                     break;
 
-                case "ArrowLeft":
-                    if (focusIsOnFormInput) return;
+                case "ArrowLeft": // was "ArrowLeft", but changed to prevent confusion when user is entering textual data!
+                    // if (focusIsOnFormInput) return;
+                    ev.preventDefault();
                     prevViableElement();
                     break;
 
                 case "ArrowDown":
-                    if (focusIsOnFormInput) { nextFormInput(); return; }
+                    // if (focusIsOnFormInput) { nextFormInput(); return; }
                     smoothScrollDown();
                     break;
 
                 case "ArrowUp":
-                    if (focusIsOnFormInput) { prevFormInput(); return; }
+                    // if (focusIsOnFormInput) { prevFormInput(); return; }
                     smoothScrollUp();
                     break;
                 default:

@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="../assets/css/feather-icons.css">
 <template>
-  <div>
+  <cmn-main-content>
     <div class="button-row">
       <cmn-button text="Download" icon="feather-download-cloud" :on-click="download" />
         <cmn-button text="Print" icon="feather-printer" :on-click="print" />
@@ -273,7 +273,7 @@
       </ul>
     </section>
 
-  </div>
+  </cmn-main-content>
 </template>
 
 <script>
@@ -282,13 +282,14 @@ import CourseModule from "../components/cv/course-module";
 import CmnSectionTitle from "../components/common/cmn-section-title";
 import CmnButton from "../components/common/cmn-button";
 import useFirebaseStorage from "../use/firebase/storage";
+import CmnMainContent from "../components/common/cmn-main-content";
 
 export default {
   name: 'home',
   setup() {
     return useFirebaseStorage();
   },
-  components: {CmnButton, CmnSectionTitle, CourseModule},
+  components: {CmnMainContent, CmnButton, CmnSectionTitle, CourseModule},
   methods: {
     print() {
       window.print();

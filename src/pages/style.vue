@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="main-content">
 
    <cmn-section-title title="The Best Thing Ever" icon="feather-grid"/>
 

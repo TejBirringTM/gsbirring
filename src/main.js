@@ -1,5 +1,6 @@
 // style
 import("./assets/css/reset.css");
+import("./assets/css/border-box-fix.css");
 import("./assets/css/global.scss");
 import("./assets/css/feather-icons.css");
 
