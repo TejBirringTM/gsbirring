@@ -21,24 +21,5 @@
         @media(max-width: $breakpoint-portrait-tablet) {
             padding: 1.5rem;
         }
-
-
-        p {
-            font-family: Montserrat, sans-serif;
-            font-weight: 700;
-            line-height: 1.6;
-            font-size: 1.5rem;
-            @media(max-width: $breakpoint-portrait-tablet) {
-                font-size: 1rem;
-            }
-        }
-
-        span {
-            display: inline-block;
-            margin-bottom: 1rem;
-            @media(max-width: $breakpoint-portrait-tablet) {
-                font-size: .75rem;
-            }
-        }
     }
 </style>

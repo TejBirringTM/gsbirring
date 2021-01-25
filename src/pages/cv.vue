@@ -11,7 +11,7 @@
 
     <section>
      <cmn-section-title title="Tech Skills" icon="feather-cpu"/>
-      <p class="text-muted text-right disable-select">
+      <p class="text-muted text-right">
         Listed below are languages and technologies that I have notable hands-on experience with
         in a professional and/or academic environment.
       </p>

@@ -51,16 +51,24 @@
         width: 100%;
 
         .title { // height: 5rem
-            padding: 3rem 1rem;
+            padding: 4.8rem 0;
             background-color: $theme-color-2;
             color: $theme-color-1;
             font-family: Montserrat, sans-serif;
-            font-size: 3rem;
+            font-size: 4.8rem;
             line-height: 1;
             font-weight: 200;
             text-transform: uppercase;
             letter-spacing: .5rem;
-        }
+            @media (max-width: $breakpoint-portrait-tablet) {
+                letter-spacing: .4rem;
+                padding: 4.8rem 2rem;
+            }
+            @media (min-width: $breakpoint-lg-screen) {
+                letter-spacing: 1rem;
+            }
+            overflow: hidden;
+    }
 
         .nav-buttons {
             display: flex;
@@ -72,7 +80,11 @@
                 margin: 0 $margin;
             }
 
-            .icon-button:hover, .icon-button:focus {
+            .icon-button:first-child:hover,
+            .icon-button:first-child:focus,
+            .icon-button:last-child:hover,
+            .icon-button:last-child:focus
+            {
                 @media(min-width: $breakpoint-portrait-tablet) {
                     margin-left: $margin + 0.4rem;
                     margin-right: $margin + 0.4rem;
@@ -87,8 +99,8 @@
     /* start: navigation icon buttons */
     .icon-button {
         border-radius: 5%;
-        height: 60px;
-        width: 60px;
+        height: 40px;
+        width: 40px;
         background-color: transparent;
         display: flex;
         flex-flow: row nowrap;
@@ -106,9 +118,10 @@
             position: absolute;
             z-index: 1;
             visibility: hidden;
-            bottom: -1.4rem;
+            bottom: -1.68rem;
             color: $theme-color-3;
             font-family: Montserrat, sans-serif;
+            font-size: 1.2rem;
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: .3rem;

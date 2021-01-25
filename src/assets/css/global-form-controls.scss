@@ -1,8 +1,21 @@
-button {
-  border: 0.2rem $theme-color-3 solid;
-  @media (max-width: $breakpoint-portrait-tablet) {
-    border-width: 0.3rem;
+$control-border-width: 2px;
+
+.button-row {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+
+  button {
+    margin-right: 2rem
   }
+
+  button:last-child {
+    margin-right: 0;
+  }
+}
+
+button {
+  border: $control-border-width $theme-color-3 solid;
   font-size: 1.4rem;
   font-weight: 600;
   min-height: 4rem;
@@ -25,7 +38,6 @@ button {
     transition-duration: 0.3s;
     transition-property: transform;
     transform: scale(1.2);
-    //color: $theme-color-3;
     background-color: $theme-color-4;
     border-color: $theme-color-3;
     color: $theme-color-3;
@@ -45,7 +57,7 @@ button {
 
 input[type='text'], textarea {
   font-family: Raleway, sans-serif;
-  border: 0.2rem $theme-color-3 solid;
+  border: $control-border-width $theme-color-3 solid;
   @media (max-width: $breakpoint-portrait-tablet) {
     border-width: 0.3rem;
   }

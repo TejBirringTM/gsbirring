@@ -13,7 +13,7 @@
       <footer>
           <div class="holder">
               <p>
-                Copyright © {{ year }} by Gurtēj Singh Birring. All Rights Reserved.
+                  <span class="c">©</span> {{ year }} <span class="text-uppercase">Gurtēj Singh Birring</span>
               </p>
           </div>
       </footer>

@@ -1,8 +1,11 @@
 <template>
     <cmn-main-content>
-<!--        <h1>I am currently open to startup opportunities, contract, and freelance work.</h1>-->
+        <section class="text-center">
+            <h4>Get In Touch</h4>
+            <p>Fill in the form below to send me a message.</p>
+        </section>
 
-        <div class="form">
+        <div class="form w-form">
             <cmn-textbox :min-length="nameMinLength" :max-length="nameMaxLength" placeholder="First Name" required
                          pattern="^[a-zA-Z]+$"
                          capitalize-first-letter
@@ -44,7 +47,7 @@
                     👈❌😑
                 </template>
             </cmn-validation-status-icon>
-            <cmn-multiline-textbox :min-length="50" :rows="10" required placeholder="Message"
+            <cmn-multiline-textbox :min-length="10" :rows="10" required placeholder="Message"
                     v-model:value="formData.message"
                     v-model:isValid="formValid.message"
             />
@@ -57,7 +60,7 @@
                 </template>
             </cmn-validation-status-icon>
 
-            <div class="text-center btn-container">
+            <div class="text-center btn-container mt-2">
                 <cmn-button text="Send" icon="feather-send" :disabled="disableSend" :on-click="sendEmail" />
             </div>
         </div>
@@ -78,7 +81,7 @@
         name: "get-in-touch",
         components: {CmnMainContent, CmnMultilineTextbox, CmnButton, CmnValidationStatusIcon, CmnTextbox},
         data() { return {
-            nameMinLength: 3,
+            nameMinLength: 2,
             nameMaxLength: 50,
             // email: "tej.birring@gmail.com"
             formData: {

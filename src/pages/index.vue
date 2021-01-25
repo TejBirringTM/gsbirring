@@ -2,19 +2,28 @@
 
   <cmn-jumbo>
     <div class="d-flex-col-nowrap text-center">
-      <cmn-arrow-keys />
-      <p class="mt-1 w-70" tabindex="0" nogrow>
-        Use your arrow keys to navigate this website.<br>
-      </p>
-      (Feature is supported by most modern browsers.)
+      <cmn-arrow-keys class="mt-1" />
+      <h6 tabindex="0" nogrow>You can use your arrow keys to navigate this website.</h6>
+      <p>(Feature supported by most modern browsers.)</p>
     </div>
   </cmn-jumbo>
 
   <cmn-main-content>
-    <div class="text-center">
-      <img class="profile-main" src="../assets/images/profile.png"  alt="" />
-      <h1 tabindex="0" nogrow>Computer Systems Engineer, <br>Founder, Historian, Author,<br>
-        Technology (& Facial Hair) Enthusiast...</h1>
+    <div class="profile">
+      <img src="../assets/images/profile.png"  alt="" />
+      <div>
+        <p>You might also know me as <strong>Tēj.</strong> I am a: </p>
+        <h1 class="mt-0" tabindex="0" nogrow>
+          Computer Systems Engineer,
+          Founder,
+          <span class="text-theme-2-faded">Former Martial Artist,</span>
+          Historian,
+          Author,
+          <span class="text-theme-2-faded">Former Gym Addict,</span>
+          Technology <span class="no-wrap">(& Facial Hair)</span> Enthusiast...
+        </h1>
+      </div>
+
     </div>
   </cmn-main-content>
 
@@ -31,3 +40,43 @@ export default {
   components: {CmnMainContent, CmnJumbo, CmnArrowKeys},
 }
 </script>
+
+<style scoped lang="scss">
+  div.profile {
+    display: flex;
+    flex-flow: row nowrap;
+    @media (max-width: $breakpoint-landscape-tablet) {
+      flex-flow: column nowrap;
+    }
+    justify-content: center;
+    align-content: center;
+    overflow: hidden;
+
+    img {
+      align-self: center;
+      border-radius: 50%;
+      width: 40vmin;
+      height: 40vmin;
+      margin-right: 4rem;
+      @media (max-width: $breakpoint-landscape-tablet) {
+        width: 60vmin;
+        height: 60vmin;
+        margin-bottom: 2rem;
+      }
+    }
+
+    div {
+      align-self: center;
+      color: $theme-color-2;
+      text-align: left;
+      max-width: 50%;
+
+      @media (max-width: $breakpoint-landscape-tablet) {
+        text-align: center;
+        max-width: 100%;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+</style>
+
