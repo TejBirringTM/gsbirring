@@ -4,6 +4,7 @@
     margin: 20mm 20mm 25mm 20mm !important;
   }
 
+
   html {
     font-size: 0.8rem; //10pt;
 
@@ -20,7 +21,13 @@
     }
 
 
-  blockquote, blockquote+cite, nav .nav-buttons , button, footer {
+  blockquote,
+  blockquote+cite,
+  button,
+  footer,
+  nav .nav-buttons,
+  .dont-print
+  {
     visibility: hidden !important;
     display: none !important;
   }

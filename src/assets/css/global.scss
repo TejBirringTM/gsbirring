@@ -314,11 +314,6 @@ ul.flat {
     padding-top: 1rem;
   }
 }
-.exclude-from-print {
-  @media print {
-    display: none;
-  }
-}
 
 
 *[nogrow] {
