@@ -93,9 +93,10 @@
         <p>asd</p>
       </section>
       <section>
-        <h3 tabindex="0" nogrow>Co-Founder | Panjāb Institute</h3>
+        <h3 tabindex="0" nogrow>Co-Founder | The Panjāb Institute</h3>
         <p class="text-muted">Dec 2020 - Jan 2021</p>
-        <p>asd</p>
+        <br>
+        <p><a href="https://panjab.institute" class="no-wrap" target="_blank">The Panjāb Institute</a> is a civics-centred think tank which aims to encourage, capture, and promote fresh multi-faceted, multi-disciplinary, data-driven discourse on the region of Panjāb. My responsibilities include development and upkeep of the content management system (CMS), data visualization projects, maintenance of a real and virtual library of references, branding, inviting potential contributors, fundraising, and more...</p>
       </section>
       <section>
         <h3 tabindex="0" nogrow>SW Engineer | HME Clear-Com Ltd.</h3>
@@ -197,6 +198,7 @@
       <section>
         <h3 tabindex="0" nogrow>University of Kent, Canterbury</h3>
         <p class="text-muted">Sep 2011 - Jun 2016</p>
+        <br>
         <p><strong>MEng Computer Systems Engineering:</strong> Graduated with <strong>first-class honours.</strong></p>
         <br>
         <p><em>Modules taken:</em></p>
@@ -235,6 +237,7 @@
     <section>
       <h3 tabindex="0" nogrow>Gateway Sixth-Form College, Leicester</h3>
       <p class="text-muted">Sep 2009 - Jun 2011</p>
+      <br>
       <p>
         <span class="text-theme-2">A2</span> Computing,
         <span class="text-theme-2">A2</span> Biology,
