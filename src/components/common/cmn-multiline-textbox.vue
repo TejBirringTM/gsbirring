@@ -1,5 +1,7 @@
 <template>
+    <div class="has-float-label" :data-placeholder="placeholder">
     <textarea
+            :id="id"
             tabindex="0"
             autocomplete="off"
             ref="inputElement"
@@ -12,6 +14,8 @@
             v-model="value"
     >
     </textarea>
+        <label :for="id">{{placeholder}}</label>
+    </div>
 </template>
 
 <script>
@@ -19,7 +23,8 @@
         name: "cmn-multiline-textbox",
         data() {return {
             value: undefined,
-            isValid: undefined
+            isValid: undefined,
+            id: undefined
         }},
         props: {
             placeholder: {
@@ -63,7 +68,11 @@
                 // console.log(`'${this.value}' is valid: `, this.isValid);
                 // console.log(inputElement.validity)
             }
+        },
+        mounted() {
+            this.id = this._uid;
         }
+
     }
 </script>
 

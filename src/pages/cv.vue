@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="../assets/css/feather-icons.css">
 <template>
   <cmn-main-content>
-    <div class="button-row">
+    <div class="button-row-end">
       <cmn-button text="Download" icon="feather-download-cloud" :on-click="download" />
         <cmn-button text="Print" icon="feather-printer" :on-click="print" />
     </div>

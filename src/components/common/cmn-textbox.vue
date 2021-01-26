@@ -1,5 +1,8 @@
 <template>
-    <input type="text"
+    <div class="has-float-label" :data-placeholder="placeholder">
+    <input
+           :id="id"
+           type="text"
            tabindex="0"
            autocomplete="off"
            ref="inputElement"
@@ -12,7 +15,10 @@
            v-model="value"
            formnovalidate
     />
+    <label :for="id">{{placeholder}}</label>
+    </div>
 </template>
+
 
 <script>
     export default {
@@ -45,7 +51,8 @@
         },
         data() { return {
             value: undefined,
-            isValid: undefined
+            isValid: undefined,
+            id: undefined
         }},
         watch: {
             value() {
@@ -79,12 +86,14 @@
             //         // inputElement.focus();
             //     }, 10);
             // }
+        },
+        mounted() {
+            this.id = this._uid;
         }
     }
-
-
 </script>
 
-<style scoped>
+
+<style scoped lang="scss">
 
 </style>

@@ -5,6 +5,7 @@ import firebase from "firebase/app";
 // Add the Firebase services that you want to use
 import "firebase/storage";
 import "firebase/analytics";
+import "firebase/functions";
 
 // Firebase configs
 import { firebaseConfig } from "../configs/firebaseConfig";
@@ -12,7 +13,7 @@ import { firebaseConfig } from "../configs/firebaseConfig";
 firebase.initializeApp(firebaseConfig);
 const analytics = firebase.analytics();
 const storage = firebase.storage();
-
+const functions = firebase.functions();
 
 
 
@@ -21,7 +22,8 @@ Firebase.install = function (app) {
 
     app.provide("$firebase", {
         analytics,
-        storage
+        storage,
+        functions
     });
 
     console.log("Firebase initialized.")

@@ -1,5 +1,5 @@
 <template>
-    <button @click.prevent.stop="click" :disabled="disabled" :tabindex=" disabled===true ? '-1' : '0'" >
+    <button ref="button" @click.prevent.stop="click" :disabled="disabled" :tabindex="tabIndex" >
         {{text}}
         <i v-if="icon" :class="icon"></i>
     </button>
@@ -24,11 +24,28 @@
             disabled: {
                 type: Boolean,
                 default: false
+            },
+            forceFocus: {
+                type: Boolean,
+                default: false
             }
         },
         methods: {
             click() {
                 this.onClick();
+            }
+        },
+        computed: {
+            tabIndex() {
+                if (this.disabled)
+                    return -1;
+                else
+                    return 0;
+            }
+        },
+        mounted() {
+            if (this.forceFocus) {
+                this.$refs.button.focus();
             }
         }
     }

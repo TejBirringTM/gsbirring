@@ -266,9 +266,9 @@ blockquote::after
 
 section {
   margin-bottom: 3rem;
-  @media (max-width: $breakpoint-portrait-tablet) {
-    margin-bottom: 1.5rem;
-  }
+  //@media (max-width: $breakpoint-portrait-tablet) {
+  //  margin-bottom: 1.5rem;
+  //}
 }
 
 
@@ -293,6 +293,7 @@ ul.list {
   list-style-position: inside;
   padding-top: 1rem;
   li {
+    padding-top: .5rem;
     padding-bottom: .5rem;
   }
 
@@ -310,8 +311,8 @@ ul.flat {
 
   li {
     flex: 0 0 auto;
-    padding-right: 2.6rem;
-    padding-top: 1rem;
+    //padding-right: 2.6rem;
+    padding: 1rem 2rem 1rem 2rem;
   }
 }
 

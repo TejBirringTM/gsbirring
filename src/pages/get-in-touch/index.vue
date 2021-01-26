@@ -106,24 +106,33 @@
                 return Boolean(disable);
             }
         },
+        inject: [ "$firebase" ],
         methods: {
             sendEmail() {
                 // get rid of any HTML and/or JS (executable code)
                 // obviously, this needs to be re-done in the server.
                 const sanitize = (dirty) => {
-                    const retVal = sanitizeHtml(dirty, {
+                    return sanitizeHtml(dirty, {
                         allowedTags: [],
                         allowedAttributes: {}
                     });
-                    return retVal;
                 };
-
-                const _firstName = sanitize(this.formData.firstName);
-                const _lastName = sanitize(this.formData.lastName);
-                const _email = sanitize(this.formData.email);
-                const _message = sanitize(this.formData.message);
-
-                console.log(_firstName, _lastName, _email, _message);
+                const email = {
+                    firstName: sanitize(this.formData.firstName),
+                    lastName: sanitize(this.formData.lastName),
+                    emailAddress: sanitize(this.formData.email),
+                    message: sanitize(this.formData.message)
+                };
+                // send
+                const sendEmail = this.$firebase.functions.httpsCallable("sendEmail");
+                sendEmail(email)
+                    .then(() => {
+                        this.$router.replace("/get-in-touch/sent");
+                    })
+                    .catch(() => {
+                        // console.log("error", error);
+                        this.$router.replace("/get-in-touch/not-sent");
+                    })
             }
         }
     }
@@ -138,14 +147,14 @@
         }
         grid-template-rows: repeat(6, auto);
 
-        & input[placeholder="First Name"] {
+        & div[data-placeholder="First Name"] {
             grid-column-start: 1;
             grid-column-end: 4;
             grid-row-start: 1;
             grid-row-end: 2;
         }
 
-        & input[placeholder="First Name"] + .status-icon {
+        & div[data-placeholder="First Name"] + .status-icon {
             grid-column-start: 4;
             grid-column-end: 5;
             grid-row-start: 1;
@@ -154,14 +163,14 @@
             margin-left: 1rem;
         }
 
-        & input[placeholder="Last Name"] {
+        & div[data-placeholder="Last Name"] {
             grid-column-start: 2;
             grid-column-end: 5;
             grid-row-start: 2;
             grid-row-end: 3;
         }
 
-        & input[placeholder="Last Name"] + .status-icon {
+        & div[data-placeholder="Last Name"] + .status-icon {
             grid-column-start: 1;
             grid-column-end: 2;
             grid-row-start: 2;
@@ -170,14 +179,14 @@
             margin-right: 1rem;
         }
 
-        & input[placeholder="Email Address"] {
+        & div[data-placeholder="Email Address"] {
             grid-column-start: 1;
             grid-column-end: 4;
             grid-row-start: 3;
             grid-row-end: 4;
         }
 
-        & input[placeholder="Email Address"] + .status-icon {
+        & div[data-placeholder="Email Address"] + .status-icon {
             grid-column-start: 4;
             grid-column-end: 5;
             grid-row-start: 3;
@@ -186,14 +195,14 @@
             margin-left: 1rem;
         }
 
-        & textarea[placeholder="Message"] {
+        & div[data-placeholder="Message"] {
             grid-column-start: 2;
             grid-column-end: 5;
             grid-row-start: 4;
             grid-row-end: 5;
         }
 
-        & textarea[placeholder="Message"] + .status-icon {
+        & div[data-placeholder="Message"] + .status-icon {
             grid-column-start: 1;
             grid-column-end: 2;
             grid-row-start: 4;

@@ -15,3 +15,7 @@ https://stackoverflow.com/questions/6794000/fixed-position-but-relative-to-conta
 https://css-tricks.com/how-to-import-a-sass-file-into-every-vue-component-in-an-app/
 
 https://css-tricks.com/couple-takes-sticky-footer/
+
+https://blog.mailtrap.io/nodemailer-gmail/#Configuring_a_Gmail_account
+https://support.google.com/mail/answer/22370?hl=en
+https://nodemailer.com/message/
