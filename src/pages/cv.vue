@@ -96,7 +96,7 @@
         <h3 tabindex="0" nogrow>Co-Founder | The Panjāb Institute</h3>
         <p class="text-muted">Dec 2020 - Jan 2021</p>
         <br>
-        <p><a href="https://panjab.institute" class="no-wrap" target="_blank">The Panjāb Institute</a> is a civics-centred think tank which aims to encourage, capture, and promote fresh multi-faceted, multi-disciplinary, data-driven discourse on the region of Panjāb. My responsibilities include development and upkeep of the content management system (CMS), data visualization projects, maintenance of a real and virtual library of references, branding, inviting potential contributors, fundraising, and more...</p>
+        <p><a href="https://panjab.institute" class="no-wrap" target="_blank">The Panjāb Institute</a> is a civics-centred think tank which aims to encourage, capture, and promote fresh multi-faceted, multi-disciplinary, data-driven discourse on the region of Panjāb. My responsibilities include development and upkeep of the content management system (CMS), maintenance of a real and virtual library of references, data visualization projects, branding, inviting potential contributors, fundraising, and more...</p>
       </section>
       <section>
         <h3 tabindex="0" nogrow>SW Engineer | HME Clear-Com Ltd.</h3>

@@ -15,8 +15,9 @@
         <p>You might also know me as <strong>Tēj.</strong> I am a: </p>
         <h1 class="mt-0" tabindex="0" nogrow>
           Computer Systems Engineer,
+          <span class="text-theme-2-faded">Great Cook,</span>
           Founder,
-          <span class="text-theme-2-faded">Former Martial Artist,</span>
+          <span class="text-theme-2-faded">Martial Artist,</span>
           Historian,
           Author,
           <span class="text-theme-2-faded">Former Gym Addict,</span>
