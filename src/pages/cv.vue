@@ -48,6 +48,8 @@
         <li>Apollo GraphQL</li>
         <li>Google Firebase</li>
         <li>FlowType</li>
+        <li>Bootstrap (Vue)</li>
+        <li>Vuetify</li>
       </ul>
 
       <h4 class="text-center" tabindex="0" nogrow>HW/SW Environments</h4>

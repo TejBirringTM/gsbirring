@@ -28,6 +28,7 @@ a, a:hover, a:visited, a:focus {
 
 html {
   /* background image */
+  background-color: $theme-color-2;
   background-image: url("../images/mountains-bg-orig.jpg");
   background-size: cover;
   background-repeat: no-repeat;
