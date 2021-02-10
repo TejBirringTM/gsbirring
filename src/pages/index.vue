@@ -16,10 +16,9 @@
         <h1 class="mt-0" tabindex="0" nogrow>
           Computer Systems Engineer,
           <span class="text-theme-2-faded">Great(?) Cook,</span>
-          Founder,
+          Writer,
           <span class="text-theme-2-faded">Martial Artist,</span>
           Historian,
-          Author,
           <span class="text-theme-2-faded">Former Gym Addict,</span>
           Technology <span class="no-wrap">(& Facial Hair)</span> Enthusiast...
         </h1>

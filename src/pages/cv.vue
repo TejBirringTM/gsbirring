@@ -33,8 +33,8 @@
 
       <h4 class="text-center" tabindex="0" nogrow>Native Frameworks & Libs</h4>
       <ul class="flat">
-        <li>Boost C++ Libraries</li>
-        <li>POCO C++ Libraries</li>
+        <li>Boost C++</li>
+        <li>POCO C++</li>
         <li>Qt C++</li>
         <li>Google Test</li>
       </ul>
@@ -45,10 +45,12 @@
         <li>Svelte</li>
         <li>D3.js</li>
         <li>Express</li>
-        <li>Apollo GraphQL</li>
+        <li>Mongoose</li>
         <li>Google Firebase</li>
+        <li>Apollo GraphQL</li>
         <li>FlowType</li>
-        <li>Bootstrap (Vue)</li>
+        <li>Bootstrap</li>
+        <li>Bootstrap Vue</li>
         <li>Vuetify</li>
       </ul>
 
