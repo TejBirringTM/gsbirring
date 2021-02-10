@@ -1,6 +1,6 @@
 <template>
-    <nav-menu title="Gurtēj Singh Birring" :nav-options="navOptions"/>
-
+    <nav-menu title="Gurtēj Singh Birring" :additional-info="['www.gsbirring.com', '+44 (0) 7840 820 898', 'tej.birring@gmail.com']" :nav-options="navOptions"/>
+<!--    <p class="text-center">www.gsbirring.com <span class="text-theme-2-faded">|</span> +44 (0) 7840 820 898 <span class="text-theme-2-faded">|</span> tej.birring@gmail.com</p>-->
 
 
 

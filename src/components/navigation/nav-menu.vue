@@ -3,6 +3,9 @@
         <p class="title text-center">
             {{ title }}
         </p>
+        <div class="printOnly">
+            <p v-for="(info, idx) in additionalInfo" :key="idx">{{info}}</p>
+        </div>
 
         <div class="nav-buttons">
             <router-link
@@ -37,6 +40,11 @@
             title: {
                 type: String,
                 required: true
+            },
+            /* Additional textual information (string) underneath title. */
+            additionalInfo: {
+                type: Array,
+                required: false
             }
         }
     }
@@ -154,4 +162,22 @@
         }
     }
     /* end: navigation icon buttons */
+
+
+    .printOnly {
+        display: none;
+        @media print {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+        }
+
+        p {
+            color: $theme-color-4;
+            font-family: Montserrat, sans-serif;
+            font-weight: 200;
+            display: inline;
+            margin: -4rem 1rem 0 1rem;
+        }
+    }
 </style>
