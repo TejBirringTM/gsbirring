@@ -20,7 +20,8 @@
           <span class="text-theme-2-faded">Martial Artist,</span>
           Historian,
           <span class="text-theme-2-faded">Former Gym Addict,</span>
-          Technology <span class="no-wrap">(& Facial Hair)</span> Enthusiast...
+          Technology <span class="no-wrap">(& Facial Hair)</span> Enthusiast,
+          <span class="text-theme-2-faded">INFJ-T...</span>
         </h1>
       </div>
 
