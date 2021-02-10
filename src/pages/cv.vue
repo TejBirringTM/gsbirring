@@ -2,7 +2,7 @@
 <template>
   <cmn-main-content>
     <div class="button-row-end">
-      <cmn-button text="Download" icon="feather-download-cloud" :on-click="download" />
+<!--      <cmn-button text="Download" icon="feather-download-cloud" :on-click="download" />-->
         <cmn-button text="Print" icon="feather-printer" :on-click="print" />
     </div>
 
@@ -110,8 +110,9 @@
            inviting potential contributors, fundraising, and more...</p>
         <br>
         <p>
-          Responsible for (perhaps the first ever) attempt to map records from the extensive 16th-century administrative
-          report of the Indian subcontinent (Mughal Hindostan) — the Ain-i-Akbari.
+          Responsible for (perhaps the first ever) attempt to map records obtained from the <em>the Ain-i-Akbari — </em>
+          an extensive 16th-century administrative report of the Mughal Empire, and thus an important primary source for
+          historians.
         </p>
       </section>
       <section>
