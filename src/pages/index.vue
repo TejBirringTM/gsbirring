@@ -63,6 +63,7 @@ export default {
         width: 60vmin;
         height: 60vmin;
         margin-bottom: 2rem;
+        margin-right: 0;
       }
     }
 
