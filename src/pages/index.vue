@@ -3,7 +3,7 @@
   <cmn-jumbo>
     <div class="d-flex-col-nowrap text-center">
       <cmn-arrow-keys class="mt-1" />
-      <h6 tabindex="0" nogrow>You can use your arrow keys to navigate this website.</h6>
+      <h6 tabindex="0" nogrow>Use your arrow keys to navigate this website.</h6>
       <p>(Supported by most modern browsers.)</p>
     </div>
   </cmn-jumbo>
