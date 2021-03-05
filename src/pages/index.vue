@@ -12,20 +12,26 @@
     <div class="profile">
       <img src="../assets/images/profile.png"  alt="" />
       <div>
-        <p>You might also know me as <strong>Tēj.</strong> I am a: </p>
+        <p class="text-medium-large text-theme-5">You can call me <strong>Tēj.</strong> I am a: </p>
         <h1 class="mt-0" tabindex="0" nogrow>
-          Computer Systems Engineer,
-          <span class="text-theme-2-faded">Great(?) Cook,</span>
-          Writer,
-          <span class="text-theme-2-faded">Martial Artist,</span>
-          Historian,
-          <span class="text-theme-2-faded">Former Gym Addict,</span>
-          Technology <span class="no-wrap">(& Facial Hair)</span> Enthusiast,
-          <span class="text-theme-2-faded">INFJ-T...</span>
+          <span class="text-theme-3">Computer Systems Engineer, </span>
+          <span class="text-theme-2-faded">Great(?) Cook, </span>
+          <span class="text-theme-3">Digital Product Prototyper, </span>
+          <span class="text-theme-2-faded">Martial Artist, </span>
+          <span class="text-theme-3">Technology Advocate, </span>
+          <span class="text-theme-2-faded">Writer, </span>
+          <span class="">Programming Enthusiast, </span>
+          <span class="text-theme-2-faded">Historian, </span>
+          <span class="no-wrap">INFJ-T...</span>
         </h1>
-      </div>
 
+
+          <cmn-button class="mt-2" text="Check out my blog" icon="feather-file-text" :on-click="print" />
+
+      </div>
     </div>
+
+
   </cmn-main-content>
 
 </template>
@@ -35,10 +41,11 @@
 import CmnArrowKeys from "../components/common/cmn-arrow-keys";
 import CmnJumbo from "../components/common/modals/cmn-jumbo";
 import CmnMainContent from "../components/common/cmn-main-content";
+import CmnButton from "../components/common/cmn-button";
 
 export default {
   name: 'home',
-  components: {CmnMainContent, CmnJumbo, CmnArrowKeys},
+  components: {CmnButton, CmnMainContent, CmnJumbo, CmnArrowKeys},
 }
 </script>
 

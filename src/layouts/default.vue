@@ -35,6 +35,11 @@
             icon: "feather-home",
             path: "/"
           },
+            // {
+            //   text: "Blog",
+            //   icon: "feather-file-text",
+            //     path: "/"
+            // },
           {
             text: "CV",
             icon: "feather-briefcase",

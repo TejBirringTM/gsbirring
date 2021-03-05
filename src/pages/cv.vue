@@ -26,7 +26,7 @@
         <li>Golang</li>
         <li>HTML</li>
         <li>CSS</li>
-        <li>JavaScript/ECMA</li>
+        <li>JavaScript/ECMAScript</li>
         <li>TypeScript</li>
         <li>C#</li>
       </ul>
@@ -37,27 +37,35 @@
         <li>POCO C++</li>
         <li>Qt C++</li>
         <li>Google Test</li>
+        <li>Crow C++</li>
       </ul>
 
-      <h4 class="text-center" tabindex="0" nogrow>Web Dev Frameworks & Libs</h4>
+        <h4 class="text-center" tabindex="0" nogrow>Web Dev Frameworks & Libs | Backend</h4>
+        <ul class="flat">
+            <li>FlowType</li>
+            <li>Express</li>
+            <li>Mongoose</li>
+            <li>Google Firebase</li>
+            <li>Apollo GraphQL</li>
+        </ul>
+
+      <h4 class="text-center" tabindex="0" nogrow>Web Dev Frameworks & Libs | Frontend</h4>
       <ul class="flat">
         <li>Vue.js 2/3</li>
         <li>Svelte</li>
         <li>D3.js</li>
-        <li>Express</li>
-        <li>Mongoose</li>
-        <li>Google Firebase</li>
-        <li>Apollo GraphQL</li>
-        <li>FlowType</li>
-        <li>Bootstrap</li>
+        <li>Bootstrap CSS</li>
         <li>Bootstrap Vue</li>
         <li>Vuetify</li>
+        <li>Tailwind CSS</li>
       </ul>
 
-      <h4 class="text-center" tabindex="0" nogrow>HW/SW Environments</h4>
+      <h4 class="text-center" tabindex="0" nogrow>HW Environments</h4>
       <ul class="flat">
-        <li>ARM Cortex-Axx based platforms</li>
         <li>x86_64-based machines</li>
+        <li>ARM Cortex-Axx based platforms</li>
+        <li>Atmel AVR</li>
+        <li>Docker</li>
         <li>Amazon EC2</li>
         <li>AWS Lambda</li>
         <li>Google Cloud Functions</li>
@@ -67,6 +75,20 @@
         <li>macOS</li>
         <li>Windows</li>
       </ul>
+
+        <h4 class="text-center" tabindex="0" nogrow>SW Environments</h4>
+        <ul class="flat">
+            <li>Node.js</li>
+            <li>.NET Framework</li>
+            <li>Docker</li>
+            <li>Heroku</li>
+            <li>Amazon EC2</li>
+            <li>AWS Lambda</li>
+            <li>Google Cloud Functions</li>
+            <li>Linux-kernel-based OSes</li>
+            <li>Apple macOS (XNU/Darwin-based OS)</li>
+            <li>Microsoft Windows</li>
+        </ul>
 
       <h4 class="text-center" tabindex="0" nogrow>Codebases</h4>
       <ul class="flat">
@@ -78,6 +100,7 @@
 
       <h4 class="text-center" tabindex="0" nogrow>Tools</h4>
       <ul class="flat">
+          <li>SSH</li>
         <li>Google Repo</li>
         <li>Git</li>
         <li>Mercurial</li>
@@ -280,8 +303,21 @@
     <section>
       <cmn-section-title title="Other Info" icon="feather-thumbs-up" />
       <ul class="list">
+          <li>
+              I have two haphazardously-managed GitHub accounts:
+            <ul class="list">
+                <li>
+                    <a class="no-wrap" href="http://github.com/tej-birring" target="_blank">Tej-Birring (<i class="feather-github"></i>)</a>.
+                </li>
+                <li>
+                    <a class="no-wrap" href="http://github.com/tejbirring8" target="_blank">TejBirring8 (<i class="feather-github"></i>)</a>.
+                </li>
+            </ul>
+          </li>
         <li>
-          I believe in continually developing new skill-sets and acquiring new knowledge. You can see a list of my completed courses on <a class="no-wrap" href="https://www.linkedin.com/in/tej-b-2b027246" target="_blank">LinkedIn (<i class="feather-linkedin"></i>)</a>.
+          I believe in continually developing new skill-sets and acquiring new knowledge.
+            You can see a list of courses I have completed on
+            <a class="no-wrap" href="https://www.linkedin.com/in/tej-b-2b027246" target="_blank">LinkedIn (<i class="feather-linkedin"></i>)</a>.
         </li>
 <!--        <li>-->
 <!--          I am <strong>not</strong> interested in a job as a "code monkey".-->
