@@ -4,7 +4,7 @@
     <div class="d-flex-col-nowrap text-center">
       <cmn-arrow-keys class="mt-1" />
       <h6 tabindex="0" nogrow>You can use your arrow keys to navigate this website.</h6>
-      <p>(Feature supported by most modern browsers.)</p>
+      <p>(Supported by most modern browsers.)</p>
     </div>
   </cmn-jumbo>
 
@@ -12,7 +12,7 @@
     <div class="profile">
       <img src="../assets/images/profile.png"  alt="" />
       <div>
-        <p class="text-medium-large text-theme-5">You can call me <strong>Tēj.</strong> I am a: </p>
+        <p class="text-medium-large text-theme-5">You can call me <strong>Tej.</strong> I am a: </p>
         <h1 class="mt-0" tabindex="0" nogrow>
           <span class="text-theme-3">Computer Systems Engineer, </span>
           <span class="text-theme-2-faded">Great(?) Cook, </span>
@@ -25,9 +25,7 @@
           <span class="no-wrap">INFJ-T...</span>
         </h1>
 
-
-          <cmn-button class="mt-2" text="Check out my blog" icon="feather-file-text" :on-click="print" />
-
+<!--          <cmn-button class="mt-2" text="Check out my blog" icon="feather-file-text" :on-click="print" />-->
       </div>
     </div>
 
@@ -41,11 +39,10 @@
 import CmnArrowKeys from "../components/common/cmn-arrow-keys";
 import CmnJumbo from "../components/common/modals/cmn-jumbo";
 import CmnMainContent from "../components/common/cmn-main-content";
-import CmnButton from "../components/common/cmn-button";
 
 export default {
   name: 'home',
-  components: {CmnButton, CmnMainContent, CmnJumbo, CmnArrowKeys},
+  components: {CmnMainContent, CmnJumbo, CmnArrowKeys},
 }
 </script>
 

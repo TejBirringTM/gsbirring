@@ -1,5 +1,5 @@
 <template>
-    <div class="section-title"><span tabindex="0" nogrow>{{title}}</span><i v-if="icon" :class="icon"></i></div>
+    <div class="section-title" tabindex="0" nogrow><span>{{title}}</span><i v-if="icon" :class="icon"></i></div>
 </template>
 
 <script>

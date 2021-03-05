@@ -235,8 +235,8 @@ blockquote::after
 
 
 .section-title {
-  background-color: $theme-color-4;
-  color: $theme-color-2;
+  background-color: $theme-color-2;
+  color: $theme-color-1;
   padding: 1.5rem 1rem 1rem 1rem;
 
   text-align: right;
@@ -323,8 +323,7 @@ ul.flat {
 }
 *[nogrow]:focus {
   outline: none;
-    text-decoration-line: underline;
-    text-decoration-style: wavy;
+  background-color: transparentize(#00ccff, .6);
 }
 /* Pulse Grow - courtesy: Hover.css v2  */
 *:not([nogrow], input, textarea):focus {

@@ -1,5 +1,5 @@
 <template>
-    <nav-menu title="Gurtēj Singh Birring" :additional-info="['www.gsbirring.com', '+44 (0) 7840 820 898', 'tej.birring@gmail.com']" :nav-options="navOptions"/>
+    <nav-menu title="Gurtej Singh Birring" :additional-info="['www.gsbirring.com', '+44 (0) 7840 820 898', 'tej.birring@gmail.com']" :nav-options="navOptions"/>
 
 
 
@@ -12,7 +12,7 @@
       <footer>
           <div class="holder">
               <p>
-                  <span class="c">©</span> {{ year }} <span class="text-uppercase">Gurtēj Singh Birring</span>
+                  <span class="c">©</span> {{ year }} <span class="text-uppercase">Gurtej Singh Birring</span>
               </p>
           </div>
       </footer>

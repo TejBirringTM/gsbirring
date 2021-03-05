@@ -3,7 +3,7 @@
   <cmn-main-content>
     <div class="button-row-end">
 <!--      <cmn-button text="Download" icon="feather-download-cloud" :on-click="download" />-->
-        <cmn-button text="Print" icon="feather-printer" :on-click="print" />
+        <cmn-button text="Print / Download" icon="feather-printer" :on-click="print" />
     </div>
 
     <blockquote>Firmitas Utilitas Venustas</blockquote>
@@ -307,10 +307,10 @@
               I have two haphazardously-managed GitHub accounts:
             <ul class="list">
                 <li>
-                    <a class="no-wrap" href="http://github.com/tej-birring" target="_blank">Tej-Birring (<i class="feather-github"></i>)</a>.
+                    <a class="no-wrap" href="http://github.com/tej-birring" target="_blank">Tej-Birring (<i class="feather-github"></i>)</a>
                 </li>
                 <li>
-                    <a class="no-wrap" href="http://github.com/tejbirring8" target="_blank">TejBirring8 (<i class="feather-github"></i>)</a>.
+                    <a class="no-wrap" href="http://github.com/tejbirring8" target="_blank">TejBirring8 (<i class="feather-github"></i>)</a>
                 </li>
             </ul>
           </li>
