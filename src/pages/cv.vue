@@ -121,21 +121,23 @@
         <p>Full-stack, end-to-end, web and embedded development.</p>
       </section>
       <section>
-        <h3 tabindex="0" nogrow>Co-Founder | The Panjāb Institute</h3>
+        <h3 tabindex="0" nogrow>Contributor | The Panjāb Institute</h3>
         <p class="text-muted">Dec 2020 - Present</p>
+<!--          <p><a href="https://panjab.institute" class="no-wrap" target="_blank">The Panjāb Institute</a>-->
         <br>
-        <p><a href="https://panjab.institute" class="no-wrap" target="_blank">The Panjāb Institute</a> is a
-          civics-centred think tank which aims to encourage, capture, and promote fresh multi-faceted, multi-disciplinary,
-          data-driven discourse on the region of Panjāb.</p>
+          <p>
+          The Panjāb Institute is a civics-centred think tank which aims to encourage, capture, and promote fresh
+          multi-faceted, multi-disciplinary, data-driven discourse on the region of Panjāb.
+          </p>
         <br>
          <p>Responsibilities include: development and upkeep of the website/content management system (CMS),
            maintenance of a real and virtual library of references, data visualization projects,
            inviting potential contributors, fundraising, and more...</p>
         <br>
         <p>
-          Responsible for (perhaps the first ever) attempt to map records obtained from the <em>the Ain-i-Akbari — </em>
-          an extensive 16th-century administrative report of the Mughal Empire, and thus an important primary source for
-          historians.
+          I am responsible for (perhaps the first ever) attempt to digitally map records obtained from the
+          <em>the Ain-i-Akbari — </em> an extensive 16th-century administrative report of the Mughal Empire,
+          and thus an important primary source for historians.
         </p>
       </section>
       <section>
