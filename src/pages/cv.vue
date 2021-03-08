@@ -113,7 +113,7 @@
     </section>
 
     <section>
-      <cmn-section-title title="Exp" icon="feather-grid"/>
+      <cmn-section-title title="Exp" icon="feather-grid" pg-break-before/>
       <section>
         <h3 tabindex="0" nogrow>Freelance Software Engineer</h3>
         <p class="text-muted">May 2020 - Present</p>
@@ -236,7 +236,7 @@
     </section>
 
     <section>
-      <cmn-section-title title="Edu" icon="feather-book" />
+      <cmn-section-title title="Edu" icon="feather-book" pg-break-before />
       <section>
         <h3 tabindex="0" nogrow>University of Kent, Canterbury</h3>
         <p class="text-muted">Sep 2011 - Jun 2016</p>
@@ -303,7 +303,7 @@
     </section>
 
     <section>
-      <cmn-section-title title="Other Info" icon="feather-thumbs-up" />
+      <cmn-section-title title="Other Info" icon="feather-thumbs-up" pg-break-before />
       <ul class="list">
           <li>
               I have two haphazardously-managed GitHub accounts:

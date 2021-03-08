@@ -73,4 +73,12 @@
   a:after {
     content: " [" attr(href) "]";
   }
+
+  .pgBreakAfter{
+    page-break-after: always;
+  }
+
+  .pgBreakBefore{
+    page-break-before: always;
+  }
 }
