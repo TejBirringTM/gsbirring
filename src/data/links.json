@@ -1,0 +1,27 @@
+[
+  {
+    "name": "HackerRank",
+    "url": "https://www.hackerrank.com/tejbirring",
+    "icon": "feather-terminal"
+  },
+  {
+    "name": "GitHub #1",
+    "url": "https://github.com/Tej-Birring",
+    "icon": "feather-github"
+  },
+  {
+    "name": "GitHub #2",
+    "url": "https://github.com/TejBirring8",
+    "icon": "feather-github"
+  },
+  {
+    "name": "LinkedIn",
+    "url": "https://www.linkedin.com/in/tej-b-2b027246",
+    "icon": "feather-linkedin"
+  },
+  {
+    "name": "Website / CV",
+    "url": "https://gsbirring.com",
+    "icon": "feather-globe"
+  }
+]

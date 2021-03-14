@@ -136,8 +136,8 @@
         <br>
         <p>
           I am responsible for (perhaps the first ever) attempt to digitally map records obtained from the
-          <em>the Ain-i-Akbari — </em> an extensive 16th-century administrative report of the Mughal Empire,
-          and thus an important primary source for historians.
+          <em>Ain-i-Akbari</em> — an extensive 16th-century administrative report of the Mughal Empire (and thus, an
+            important primary source).
         </p>
       </section>
       <section>
@@ -305,6 +305,7 @@
     <section>
       <cmn-section-title title="Other Info" icon="feather-thumbs-up" pg-break-before />
       <ul class="list">
+          <li>I have a <a class="no-wrap" href="https://www.hackerrank.com/tejbirring" target="_blank">HackerRank</a> profile.</li>
           <li>
               I have two haphazardously-managed GitHub accounts:
             <ul class="list">
@@ -318,14 +319,14 @@
           </li>
         <li>
           I believe in continually developing new skill-sets and acquiring new knowledge.
-            You can see a list of courses I have completed on
+            You can see a list of my completed courses on
             <a class="no-wrap" href="https://www.linkedin.com/in/tej-b-2b027246" target="_blank">LinkedIn (<i class="feather-linkedin"></i>)</a>.
         </li>
 <!--        <li>-->
 <!--          I am <strong>not</strong> interested in a job as a "code monkey".-->
 <!--          I am an engineer; hire me to solve problems i.e. research, design, develop and/or prototype digital solutions.-->
 <!--        </li>-->
-        <li>Interviews suck. I'd much rather you send me a realistic coding problem — or, even better — a mini-project! 🙂</li>
+        <li>Feel free to send me a realistic coding problem, — or, even better — a mini-project! 🙂</li>
         <li><strong>Citizenship:</strong> British</li>
         <li>I hold a full "clean" UK driver’s license.</li>
       </ul>

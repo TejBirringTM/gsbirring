@@ -62,6 +62,9 @@
             padding: 4.8rem 0;
             background-color: $theme-color-2;
             color: $theme-color-1;
+            @media print {
+                color: $theme-color-2;
+            }
             font-family: Montserrat, sans-serif;
             font-size: 4.8rem;
             line-height: 1;
@@ -133,6 +136,8 @@
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: .3rem;
+            width: 10rem;
+            text-align: center;
         }
 
         &:hover, &:focus {
@@ -170,10 +175,12 @@
             display: flex;
             flex-flow: row nowrap;
             justify-content: center;
+            border-bottom: .5px solid $theme-color-2;
+            margin-bottom: 2rem;
         }
 
         p {
-            color: $theme-color-4;
+            color: $theme-color-2;
             font-family: Montserrat, sans-serif;
             font-weight: 200;
             display: inline;

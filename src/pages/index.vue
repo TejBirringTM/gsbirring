@@ -15,8 +15,8 @@
         <p class="text-medium-large text-theme-5">You can call me <strong>Tej.</strong> I am a: </p>
         <h1 class="mt-0" tabindex="0" nogrow>
           <span class="text-theme-3">Computer Systems Engineer, </span>
-          <span class="text-theme-2-faded">Great(?) Cook, </span>
-          <span class="text-theme-3">Digital Product Prototyper, </span>
+          <span class="text-theme-2-faded">Associative Thinker, </span>
+          <span class="text-theme-3">Digital Products Prototyper, </span>
           <span class="text-theme-2-faded">Martial Artist, </span>
           <span class="text-theme-3">Technology Advocate, </span>
           <span class="text-theme-2-faded">Writer, </span>

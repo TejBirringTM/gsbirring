@@ -35,6 +35,11 @@
             icon: "feather-home",
             path: "/"
           },
+            {
+                text: "Link Tree",
+                icon: "feather-bookmark",
+                path: "/link-tree"
+            },
             // {
             //   text: "Blog",
             //   icon: "feather-file-text",
