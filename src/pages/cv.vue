@@ -11,7 +11,7 @@
 
     <section>
      <cmn-section-title title="Tech Skills" icon="feather-cpu"/>
-      <p class="text-muted text-right">
+      <p class="text-muted text-right infoParagraph">
         Listed below are languages and technologies that I have notable hands-on experience with
         in a professional and/or academic environment.
       </p>
@@ -361,3 +361,12 @@ export default {
   }
 }
 </script>
+
+<style scoped lang="scss">
+    .infoParagraph {
+        @media print {
+            margin-left: auto;
+            max-width: 90%;
+        }
+    }
+</style>
