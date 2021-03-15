@@ -39,7 +39,11 @@
             padding-right: 6rem;
         }
         .link {
-            margin: .6rem;
+            margin: 1.6rem 0;
+            height: 5.2rem;
+        }
+        .link:first-child {
+            margin-top: 0;
         }
     }
 </style>

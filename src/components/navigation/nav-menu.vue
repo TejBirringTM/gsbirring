@@ -85,7 +85,6 @@
             display: flex;
             flex-flow: row wrap;
             justify-content: space-around;
-
             $margin: 0.6rem;
             .icon-button {
                 margin: 0 $margin;
@@ -136,7 +135,9 @@
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: .3rem;
-            width: 10rem;
+            @media (min-width: $breakpoint-portrait-tablet) {
+                width: 10rem;
+            }
             text-align: center;
         }
 

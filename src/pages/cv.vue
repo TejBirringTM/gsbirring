@@ -47,6 +47,8 @@
             <li>Mongoose</li>
             <li>Google Firebase</li>
             <li>Apollo GraphQL</li>
+            <li>Gridsome</li>
+            <li>VuePress</li>
         </ul>
 
       <h4 class="text-center" tabindex="0" nogrow>Web Dev Frameworks & Libs | Frontend</h4>
@@ -118,28 +120,28 @@
         <h3 tabindex="0" nogrow>Freelance Software Engineer</h3>
         <p class="text-muted">May 2020 - Present</p>
         <br>
-        <p>Full-stack, end-to-end, web and embedded development.</p>
+        <p>Full-stack software development and product prototyping (various hardware platforms, operating systems, and languages/runtime environments).</p>
       </section>
-      <section>
-        <h3 tabindex="0" nogrow>Contributor | The Panjāb Institute</h3>
-        <p class="text-muted">Dec 2020 - Present</p>
-<!--          <p><a href="https://panjab.institute" class="no-wrap" target="_blank">The Panjāb Institute</a>-->
-        <br>
-          <p>
-          The Panjāb Institute is a civics-centred think tank which aims to encourage, capture, and promote fresh
-          multi-faceted, multi-disciplinary, data-driven discourse on the region of Panjāb.
-          </p>
-        <br>
-         <p>Responsibilities include: development and upkeep of the website/content management system (CMS),
-           maintenance of a real and virtual library of references, data visualization projects,
-           inviting potential contributors, fundraising, and more...</p>
-        <br>
-        <p>
-          I am responsible for (perhaps the first ever) attempt to digitally map records obtained from the
-          <em>Ain-i-Akbari</em> — an extensive 16th-century administrative report of the Mughal Empire (and thus, an
-            important primary source).
-        </p>
-      </section>
+<!--      <section>-->
+<!--        <h3 tabindex="0" nogrow>Voluntary Contributor | The Panjāb Institute</h3>-->
+<!--        <p class="text-muted">Dec 2020 - Present</p>-->
+<!--&lt;!&ndash;          <p><a href="https://panjab.institute" class="no-wrap" target="_blank">The Panjāb Institute</a>&ndash;&gt;-->
+<!--        <br>-->
+<!--          <p>-->
+<!--          The Panjāb Institute is a civics-centred think tank which aims to encourage, capture, and promote fresh-->
+<!--          multi-faceted, multi-disciplinary, data-driven discourse on the region of Panjāb.-->
+<!--          </p>-->
+<!--        <br>-->
+<!--         <p>Responsibilities include: development and upkeep of the website/content management system (CMS),-->
+<!--           maintenance of a real and virtual library of references, data visualization projects,-->
+<!--           inviting potential contributors, fundraising, and more...</p>-->
+<!--        <br>-->
+<!--        <p>-->
+<!--          I am responsible for (perhaps the first ever) attempt to digitally map records obtained from the-->
+<!--          <em>Ain-i-Akbari</em> — an extensive 16th-century administrative report of the Mughal Empire (and thus, an-->
+<!--            important primary source).-->
+<!--        </p>-->
+<!--      </section>-->
       <section>
         <h3 tabindex="0" nogrow>SW Engineer | HME Clear-Com Ltd.</h3>
         <p class="text-muted">Nov 2018 - Dec 2019</p>
