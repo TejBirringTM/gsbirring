@@ -12,8 +12,8 @@ const functions = require('firebase-functions');
 const nodeMailer = require('nodemailer');
 const transporter = nodeMailer.createTransport({
    service: 'gmail',
-   auth: {
-      user: 'gsbirring7@gmail.com',
+      auth: {
+      user: 'tej.birring@gmail.com',
       pass: 'rbtkkfbjpmihtzko'
    }
 });
@@ -61,8 +61,8 @@ exports.sendEmail = functions.https.onCall((data, context) => {
    const mailOptions = {
       from: `${emailData.emailAddress}`,   // By default, gmail will automatically replace this with the authenticated sender account :(
       replyTo: `${emailData.emailAddress}`,   // By default, gmail will automatically replace this with the authenticated sender account :(
-      to: 'gsbirring7@gmail.com',
-      subject: `Hi from ${emailData.firstName} ${emailData.lastName} via 'gsbirring.com'`,
+      to: 'tej.birring@gmail.com',
+      subject: `Hi from ${emailData.firstName} ${emailData.lastName} via 'tejbirring.com'`,
       text:
 `
    ${emailData.firstName} ${emailData.lastName} wrote:

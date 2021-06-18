@@ -1,8 +1,13 @@
 [
   {
-    "name": "HackerRank",
-    "url": "https://www.hackerrank.com/tejbirring",
-    "icon": "feather-terminal"
+    "name": "Website / CV",
+    "url": "https://tejbirring.com",
+    "icon": "feather-globe"
+  },
+  {
+    "name": "LinkedIn",
+    "url": "https://www.linkedin.com/in/tej-b-2b027246",
+    "icon": "feather-linkedin"
   },
   {
     "name": "GitHub #1",
@@ -15,13 +20,8 @@
     "icon": "feather-github"
   },
   {
-    "name": "LinkedIn",
-    "url": "https://www.linkedin.com/in/tej-b-2b027246",
-    "icon": "feather-linkedin"
-  },
-  {
-    "name": "Website / CV",
-    "url": "https://gsbirring.com",
-    "icon": "feather-globe"
+    "name": "HackerRank",
+    "url": "https://www.hackerrank.com/tejbirring",
+    "icon": "feather-terminal"
   }
 ]

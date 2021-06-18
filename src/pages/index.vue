@@ -3,7 +3,7 @@
   <cmn-jumbo>
     <div class="d-flex-col-nowrap text-center">
       <cmn-arrow-keys class="mt-1" />
-      <h6 tabindex="0" nogrow>Use your arrow keys to navigate this website.</h6>
+      <h6 tabindex="0" nogrow>You can use your arrow keys to navigate this website.</h6>
       <p>(Supported by most modern browsers.)</p>
     </div>
   </cmn-jumbo>
@@ -12,17 +12,21 @@
     <div class="profile">
       <img src="../assets/images/profile.png"  alt="" />
       <div>
-        <p class="text-medium-large text-theme-5">You can call me <strong>Tej.</strong> I am a: </p>
+        <p class="text-medium-large text-theme-5">Hey, I'm <strong>Tej.</strong> 🤝</p>
+        <br/>
+        <p class="text-medium-large text-theme-5">My interests include:</p>
         <h1 class="mt-0" tabindex="0" nogrow>
-          <span class="text-theme-3">Computer Systems Engineer, </span>
-          <span class="text-theme-2-faded">Associative Thinker, </span>
-          <span class="text-theme-3">Digital Products Prototyper, </span>
-          <span class="text-theme-2-faded">Martial Artist, </span>
-          <span class="text-theme-3">Technology Advocate, </span>
-          <span class="text-theme-2-faded">Writer, </span>
-          <span class="">Programming Enthusiast, </span>
-          <span class="text-theme-2-faded">Historian, </span>
-          <span class="no-wrap">INFJ-T...</span>
+          <span class="text-theme-2">Hardware/Software Engineering, </span>
+          <span class="text-theme-3">Product Prototyping, </span>
+          <span class="text-theme-2-faded">Martial Arts, </span>
+          <span class="text-theme-2">Startups, </span>
+          <span class="text-theme-3">Data Visualisation, </span>
+          <span class="text-theme-2-faded">Business Strategy, </span>
+          <span class="text-theme-2">Knowledge Management, </span>
+          <span class="text-theme-3">Strength Training, </span>
+          <span class="text-theme-2-faded">(Military) History, </span>
+          <span class="text-theme-2">Nature and Ecology</span>
+
         </h1>
 
 <!--          <cmn-button class="mt-2" text="Check out my blog" icon="feather-file-text" :on-click="print" />-->

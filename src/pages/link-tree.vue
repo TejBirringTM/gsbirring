@@ -1,6 +1,6 @@
 <template>
     <div class="linksWrapper">
-        <cmn-button class="link" v-for="(link, idx) in links" :key="idx" :text="link.name" :icon="link.icon" @click="visit(link.url)"></cmn-button>
+        <cmn-button :disabled="link.disabled" class="link" v-for="(link, idx) in linksFiltered" :key="idx" :text="link.name" :icon="link.icon" @click="visit(link.url)"></cmn-button>
     </div>
 </template>
 
@@ -13,7 +13,17 @@
         components: {CmnButton},
         data() {
             return {
-                links
+            }
+        },
+        computed: {
+            linksFiltered() {
+              const hostname = location.hostname;
+              links.forEach( (el) => {
+                if (el.url.includes(hostname)) {
+                  el.disabled = true;
+                }
+              });
+              return links;
             }
         },
         methods: {
